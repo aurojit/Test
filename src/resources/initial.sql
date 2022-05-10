@@ -30,6 +30,9 @@ insert into test_order_status values ('order4', 3, 'out of delivery');
 insert into test_order_status values ('order4', 1, 'ordered');
 insert into test_order_status values ('order4', 2, 'shipped');
 
+select * from test_order;
+select * from test_order_status;
+
 SELECT tord.order_id, quantity, type, status, sequence
 FROM   test_order tord, test_order_status tordsts
 WHERE  tord.order_id = tordsts.order_id
@@ -38,6 +41,17 @@ WHERE  tord.order_id = tordsts.order_id
                                WHERE  sequence = (SELECT max(sequence)
                                                   FROM   test_order_status
                                                   WHERE order_id = tord.order_id) AND order_id = tord.order_id);
+
+-- using inner join
+
+SELECT tord.order_id, quantity, type, status, sequence
+FROM   test_order tord inner join test_order_status tordsts
+ON     tord.order_id = tordsts.order_id
+WHERE  ( status, sequence ) IN (SELECT status, sequence
+                                FROM   test_order_status
+                                WHERE  sequence = (SELECT max(sequence)
+                                                   FROM   test_order_status
+                                                   WHERE order_id = tord.order_id) AND order_id = tord.order_id);
 
 drop table test_order;
 drop table test_order_status;
