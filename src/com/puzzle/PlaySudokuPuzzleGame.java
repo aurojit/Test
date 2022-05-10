@@ -15,7 +15,7 @@ import java.util.Scanner;
  * @author Aurojit Basak
  * @version 1.0
  * @implNote This problem has been solved by Back-Tracking Algorithm (using Recursion).
- * @date 08.08.2020
+ * @since 08.08.2020
  */
 public class PlaySudokuPuzzleGame {
 
@@ -38,7 +38,7 @@ public class PlaySudokuPuzzleGame {
      * SUDOKU_LEVEL HARD : Give any number from 5 to 7.
      * Here SUDOKU_LEVEL is 1. That means you are playing Sudoku in Easy Level
      */
-    public static int SUDOKU_LEVEL;
+    public static byte SUDOKU_LEVEL;
 
     /**
      * Scanner is used to take user input.
@@ -126,8 +126,10 @@ public class PlaySudokuPuzzleGame {
         System.out.println("Press 8 : SUDOKU LEVEL ALMOST IMPOSSIBLE");
         System.out.println("Press 9 : SUDOKU LEVEL TOTALLY IMPOSSIBLE");
         System.out.println("************************ SUDOKU LEVELS ************************");
-        System.out.print("Please select level : ");
-        SUDOKU_LEVEL = Integer.parseInt(scanner.next());
+        System.out.print("Please choose level : ");
+        SUDOKU_LEVEL = Byte.parseByte(scanner.next());
+        if (!(SUDOKU_LEVEL >= 1 && SUDOKU_LEVEL <= 9))
+            throw new RuntimeException("Invalid SUDOKU LEVEL: " + SUDOKU_LEVEL);
     }
 
     /**
