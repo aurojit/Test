@@ -1,12 +1,12 @@
 package com.combinatorpattern;
 
+import com.combinatorpattern.CustomerRegistrationValidator.ValidationResults;
+
 import java.time.LocalDate;
 
+import static com.combinatorpattern.CustomerRegistrationValidator.isDOBValid;
 import static com.combinatorpattern.CustomerRegistrationValidator.isEmailValid;
 import static com.combinatorpattern.CustomerRegistrationValidator.isPhoneValid;
-import static com.combinatorpattern.CustomerRegistrationValidator.isDOBValid;
-
-import com.combinatorpattern.CustomerRegistrationValidator.ValidationResults;
 
 public class Main {
     public static void main(String[] args) {

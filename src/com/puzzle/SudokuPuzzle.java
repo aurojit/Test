@@ -1,8 +1,8 @@
 package com.puzzle;
 
-import java.util.Set;
-import java.util.Random;
 import java.util.HashSet;
+import java.util.Random;
+import java.util.Set;
 
 /**
  * This is a sudoku puzzle solving.

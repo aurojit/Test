@@ -6,7 +6,7 @@ public class PascalTringle {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n = 0;
+        int n;
         do {
 
             System.out.println("Enter tringle length: ");
@@ -21,7 +21,7 @@ public class PascalTringle {
                 }
                 System.out.println();
             }
-        } while (n == 0 ? false : true);
+        } while (n != 0);
     }
 
     private static int pascal(int row, int col) {

@@ -15,6 +15,6 @@ public class LeapYear {
             else
                 System.out.println("Not Leap-Year");
             System.out.println(".........Enter any negative number to exit the loop or positive number to continue............");
-        } while (Integer.parseInt(scanner.next()) <= 0 ? false : true);
+        } while (Integer.parseInt(scanner.next()) > 0);
     }
 }

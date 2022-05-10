@@ -1,7 +1,5 @@
 package com.thead;
 
-import java.util.concurrent.Callable;
-
 public class MainThread {
     public static void main(String[] args) {
 

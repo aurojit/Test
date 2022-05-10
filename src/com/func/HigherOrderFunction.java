@@ -8,7 +8,7 @@ public class HigherOrderFunction {
 
     public static void main(String[] args) {
 
-        List<String> weeks = new ArrayList<String>();
+        List<String> weeks = new ArrayList<>();
         weeks.add("Sunday");
         weeks.add("Monday");
         weeks.add("Tuesday");

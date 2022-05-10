@@ -1,10 +1,10 @@
 package com.combinatorpattern;
 
+import com.combinatorpattern.CustomerRegistrationValidator.ValidationResults;
+
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.function.Function;
-
-import com.combinatorpattern.CustomerRegistrationValidator.ValidationResults;
 
 public interface CustomerRegistrationValidator extends Function<Customer, ValidationResults> {
 

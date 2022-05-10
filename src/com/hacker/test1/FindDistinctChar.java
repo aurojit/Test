@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Set;
 
 class DistinctChar {
-    private String name;
-    private int charCount;
+    private final String name;
+    private final int charCount;
 
     public DistinctChar(String name, int charCount) {
         this.name = name;
@@ -34,7 +34,7 @@ class DistinctChar {
 public class FindDistinctChar {
 
     public static void main(String[] args) {
-        List<String> names = new ArrayList<String>();
+        List<String> names = new ArrayList<>();
         names.add("aurojit");
         names.add("aureeei");
         names.add("bureeei");
@@ -43,7 +43,7 @@ public class FindDistinctChar {
         names.stream()
                 .filter(name -> name.startsWith("a"))
                 .map(name -> {
-                    Set<String> characterSet = new HashSet<String>();
+                    Set<String> characterSet = new HashSet<>();
                     for (int i = 0; i < name.length(); i++) {
                         characterSet.add(String.valueOf(name.charAt(i)));
                     }

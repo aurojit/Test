@@ -2,25 +2,20 @@ package com.func;
 
 import com.model.Person;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
-import java.util.function.Supplier;
 
 public class TestFunction {
 
     public static void main(String[] args) {
-        Function<Integer, String> basic = (key) -> {
-            return key%2 == 0 ? "Even Number" : "Odd Number";
-        };
+        Function<Integer, String> basic = (key) -> key%2 == 0 ? "Even Number" : "Odd Number";
 
         String apply = basic.apply(14);
 
         System.out.println(apply);
 
-        Map<String, Integer> mapData = new HashMap<String, Integer>();
+        Map<String, Integer> mapData = new HashMap<>();
         mapData.put("ke1", 1);
         mapData.put("ke2", 2);
         mapData.put("ke3", 3);
