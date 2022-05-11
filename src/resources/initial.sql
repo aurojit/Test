@@ -33,8 +33,8 @@ insert into test_order_status (order_id, sequence, status) values ('order4', 2, 
 
 
 --Error
-insert into test_order_status values ('order4', 2, 'shipped');
-insert into test_order_status values ('order6', 1, 'ordered');
+insert into test_order_status (order_id, sequence, status) values ('order4', 2, 'shipped');
+insert into test_order_status (order_id, sequence, status) values ('order6', 1, 'ordered');
 
 select * from test_order;
 select * from test_order_status;
